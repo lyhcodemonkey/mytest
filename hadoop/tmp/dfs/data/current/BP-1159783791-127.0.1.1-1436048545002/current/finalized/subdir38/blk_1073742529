@@ -1,0 +1,1 @@
+jjobId=job_1440492175555_0005,submitTime=1440499834113,launchTime=1440499837979,firstMapTaskLaunchTime=1440499840139,firstReduceTaskLaunchTime=0,finishTime=1440499855447,resourcesPerMap=1024,resourcesPerReduce=0,numMaps=1,numReduces=0,user=liyaohui,queue=default,status=FAILED,mapSlotSeconds=9,reduceSlotSeconds=0,jobName=Input Driver running over input: testdata

@@ -1,0 +1,1 @@
+YjobId=job_1436941682764_0001,submitTime=1436947822533,launchTime=1436947829677,firstMapTaskLaunchTime=1436947831924,firstReduceTaskLaunchTime=1436947836784,finishTime=1436947839725,resourcesPerMap=1024,resourcesPerReduce=1024,numMaps=1,numReduces=1,user=liyaohui,queue=default,status=SUCCEEDED,mapSlotSeconds=2,reduceSlotSeconds=2,jobName=wc.jar

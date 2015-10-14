@@ -1,0 +1,52 @@
+2015-08-25 19:47:59,400 WARN [main] org.apache.hadoop.conf.Configuration: job.xml:an attempt to override final parameter: mapreduce.job.end-notification.max.retry.interval;  Ignoring.
+2015-08-25 19:47:59,402 WARN [main] org.apache.hadoop.conf.Configuration: job.xml:an attempt to override final parameter: mapreduce.job.end-notification.max.attempts;  Ignoring.
+2015-08-25 19:47:59,465 WARN [main] org.apache.hadoop.util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2015-08-25 19:47:59,624 INFO [main] org.apache.hadoop.metrics2.impl.MetricsConfig: loaded properties from hadoop-metrics2.properties
+2015-08-25 19:47:59,694 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2015-08-25 19:47:59,694 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: MapTask metrics system started
+2015-08-25 19:47:59,705 INFO [main] org.apache.hadoop.mapred.YarnChild: Executing with tokens:
+2015-08-25 19:47:59,705 INFO [main] org.apache.hadoop.mapred.YarnChild: Kind: mapreduce.job, Service: job_1440492175555_0007, Ident: (org.apache.hadoop.mapreduce.security.token.JobTokenIdentifier@2bba4f)
+2015-08-25 19:47:59,756 INFO [main] org.apache.hadoop.mapred.YarnChild: Sleeping for 0ms before retrying again. Got null now.
+2015-08-25 19:48:00,032 WARN [main] org.apache.hadoop.conf.Configuration: job.xml:an attempt to override final parameter: mapreduce.job.end-notification.max.retry.interval;  Ignoring.
+2015-08-25 19:48:00,032 WARN [main] org.apache.hadoop.conf.Configuration: job.xml:an attempt to override final parameter: mapreduce.job.end-notification.max.attempts;  Ignoring.
+2015-08-25 19:48:00,073 INFO [main] org.apache.hadoop.mapred.YarnChild: mapreduce.cluster.local.dir for child: /home/liyaohui/hadoop/tmp/nm-local-dir/usercache/liyaohui/appcache/application_1440492175555_0007
+2015-08-25 19:48:00,135 WARN [main] org.apache.hadoop.conf.Configuration: job.xml:an attempt to override final parameter: mapreduce.job.end-notification.max.retry.interval;  Ignoring.
+2015-08-25 19:48:00,135 WARN [main] org.apache.hadoop.conf.Configuration: job.xml:an attempt to override final parameter: mapreduce.job.end-notification.max.attempts;  Ignoring.
+2015-08-25 19:48:00,161 INFO [main] org.apache.hadoop.conf.Configuration.deprecation: mapred.tip.id is deprecated. Instead, use mapreduce.task.id
+2015-08-25 19:48:00,161 INFO [main] org.apache.hadoop.conf.Configuration.deprecation: mapred.local.dir is deprecated. Instead, use mapreduce.cluster.local.dir
+2015-08-25 19:48:00,161 INFO [main] org.apache.hadoop.conf.Configuration.deprecation: mapred.job.id is deprecated. Instead, use mapreduce.job.id
+2015-08-25 19:48:00,162 INFO [main] org.apache.hadoop.conf.Configuration.deprecation: job.local.dir is deprecated. Instead, use mapreduce.job.local.dir
+2015-08-25 19:48:00,162 INFO [main] org.apache.hadoop.conf.Configuration.deprecation: mapred.task.is.map is deprecated. Instead, use mapreduce.task.ismap
+2015-08-25 19:48:00,162 INFO [main] org.apache.hadoop.conf.Configuration.deprecation: mapred.task.id is deprecated. Instead, use mapreduce.task.attempt.id
+2015-08-25 19:48:00,162 INFO [main] org.apache.hadoop.conf.Configuration.deprecation: mapred.task.partition is deprecated. Instead, use mapreduce.task.partition
+2015-08-25 19:48:00,244 INFO [main] org.apache.hadoop.conf.Configuration.deprecation: session.id is deprecated. Instead, use dfs.metrics.session-id
+2015-08-25 19:48:00,520 INFO [main] org.apache.hadoop.mapred.Task:  Using ResourceCalculatorProcessTree : [ ]
+2015-08-25 19:48:00,684 INFO [main] org.apache.hadoop.mapred.MapTask: Processing split: Paths:/user/liyaohui/testdata/test1.csv:0+1977895
+2015-08-25 19:48:00,692 WARN [main] org.apache.hadoop.mapred.YarnChild: Exception running child : java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.apache.hadoop.mapreduce.lib.input.CombineFileRecordReader.initNextRecordReader(CombineFileRecordReader.java:164)
+	at org.apache.hadoop.mapreduce.lib.input.CombineFileRecordReader.<init>(CombineFileRecordReader.java:126)
+	at org.apache.mahout.text.MultipleTextFileInputFormat.createRecordReader(MultipleTextFileInputFormat.java:43)
+	at org.apache.hadoop.mapred.MapTask$NewTrackingRecordReader.<init>(MapTask.java:491)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:734)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:339)
+	at org.apache.hadoop.mapred.YarnChild$2.run(YarnChild.java:162)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1491)
+	at org.apache.hadoop.mapred.YarnChild.main(YarnChild.java:157)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.apache.hadoop.mapreduce.lib.input.CombineFileRecordReader.initNextRecordReader(CombineFileRecordReader.java:155)
+	... 10 more
+Caused by: java.lang.IncompatibleClassChangeError: Found interface org.apache.hadoop.mapreduce.TaskAttemptContext, but class was expected
+	at org.apache.mahout.text.WholeFileRecordReader.<init>(WholeFileRecordReader.java:59)
+	... 15 more
+
+2015-08-25 19:48:00,704 INFO [main] org.apache.hadoop.mapred.Task: Runnning cleanup for the task
+2015-08-25 19:48:00,710 WARN [main] org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter: Could not delete hdfs://ubuntu01:9000/user/liyaohui/testdata1/_temporary/1/_temporary/attempt_1440492175555_0007_m_000000_0
+2015-08-25 19:48:00,814 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Stopping MapTask metrics system...
+2015-08-25 19:48:00,815 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: MapTask metrics system stopped.
+2015-08-25 19:48:00,815 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: MapTask metrics system shutdown complete.
